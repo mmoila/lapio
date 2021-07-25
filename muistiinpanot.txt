@@ -29,8 +29,11 @@ Hyödyllisiä komentoja:
 SSH:
 
 ssh tunnus@palvelimen.osoite 
--ssh keygen = luo ssh avainparin
+-ssh-keygen = luo ssh avainparin
 -scp polku/kopioitavaan/tiedostoon tunnus@palvelmen.osoite:polku/kohdekansioon = siirtää julkisen avaimen yliopiston palvelimelle
+-eval $(ssh-agent -s) = ssh agentin toimivuus tulostaa id:n
+-$ ssh-add ~/.ssh/id_rsa = agentin luominen
+
 
 Yliopiston koneilla julkinen avain pitää lisätä osoitteeseen ~/.ssh/authorized_keys. 
 
@@ -43,7 +46,7 @@ Oikeudet:
     r = lukuoikeus
     w = kirjoitusoikeus
     x = ajo-oikeus
-    u = tiedoston omistaja
+    u = tiedoston omistaja 
     g = ryhmään kuuluvat
     o = kaikki muut käyttäjät
 
@@ -58,5 +61,9 @@ git config --global user.name 'nimi'
 -git status = kansion nykyinen tila
 -git add = lisää committiin uusi tiedosto (vipu -p antaa valita mitkä muutokset lisätään)
 -git checkout -- esimerkki.txt = poistaa seuratun tiedoston muutoksen
--git -m commit "otsikko" = commitin lisääminen (ilman vipua -m aukeaa tekstieditori)
+-git commit -m "otsikko" = commitin lisääminen (ilman vipua -m aukeaa tekstieditori)
 -git log = tarkastele luotuja committeja
+
+-git remote add origin git@github.com:kayttaja/projekti.git = etärepositorion liittäminen ssh yhteydellä
+-git push remotennimi haarannimi = commitin julkaiseminen eli puskeminen (-u vivulla tallentuu valinta ja sen jälkeen riittää pelkkä git push)
+
