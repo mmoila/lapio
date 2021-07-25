@@ -1,0 +1,62 @@
+Hyödyllisiä komentoja:
+
+* = villikortti
+
+-komennon perään --help = ohjeita
+-man ja parametriksi komento = laajemmat ohjeet
+-pwd = nykyinen polku
+-ls = polun sisältö
+-cd = navigointi
+-mv = tiedoston siirto
+-cp = tiedoston kopiointi (2 parametria)
+-mkdir = kansion luonti
+-rm = poistaa tiedoston
+-nano esimerkki.txt = tekstinkäsittelyohjelma
+-cat = tekstin luku komentorivillä
+-head ja tail = tiedoston kymmenen ekaa tai vikaa riviä (-n vivulla voi muokata)
+-grep = etsii tiettyä merkkijonoa tiedostosta ja tulostaa rivin, jossa se esiintyy
+
+-watch: toista komentoa tietyin väliajoin
+-&& tai ;: ketjuta komentoja peräjälkeen
+-alias: määrittele komennoille aliaksia, joiden avulla voit kutsua niitä esimerkiksi nopeammin.
+-&: kirjoittamalla merkin komennon loppuun sen aloittama prosessi jää taustalle, eikä lukitse komentoriviä
+-history: tarkastele komentohistoriaa
+-Ctrl + r: etsi komentoja omasta historiasta hakusanoilla
+
+- | putki = antaa vasemman puoleisen komennon tuloksen oikenpuoleisen syötteeksi
+- > ohjaa komennon tulosteen tiedostoon ( > korvaa kohdetiedoston koko sisällön annetulla tekstillä, >> lisää sen kohdetiedoston loppuun uudelle riville.)
+
+SSH:
+
+ssh tunnus@palvelimen.osoite 
+-ssh keygen = luo ssh avainparin
+-scp polku/kopioitavaan/tiedostoon tunnus@palvelmen.osoite:polku/kohdekansioon = siirtää julkisen avaimen yliopiston palvelimelle
+
+Yliopiston koneilla julkinen avain pitää lisätä osoitteeseen ~/.ssh/authorized_keys. 
+
+Oikeudet:
+
+-rw-r--r-- linkit(nro) omistaja ryhmä koko (kansio - vai tiedosto d/omistajan oikeudet/ ryhmän oikeudet/ muiden oikeudet)
+
+-ls -l näyttää kansion oikeudet 
+-chmod u+x esimerkki.txt = oikeuksien muutos: omistajalle ajo-oikeus (- poistaa ja + antaa oikeuden)
+    r = lukuoikeus
+    w = kirjoitusoikeus
+    x = ajo-oikeus
+    u = tiedoston omistaja
+    g = ryhmään kuuluvat
+    o = kaikki muut käyttäjät
+
+Git:
+
+Configurointi:
+git config --global user.name 'nimi'
+                    user.email esimerkki@gmail.chmod
+                    core.editor nano
+
+-git init = kansion alustus
+-git status = kansion nykyinen tila
+-git add = lisää committiin uusi tiedosto (vipu -p antaa valita mitkä muutokset lisätään)
+-git checkout -- esimerkki.txt = poistaa seuratun tiedoston muutoksen
+-git -m commit "otsikko" = commitin lisääminen (ilman vipua -m aukeaa tekstieditori)
+-git log = tarkastele luotuja committeja
