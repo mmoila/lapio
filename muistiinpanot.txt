@@ -68,5 +68,6 @@ git config --global user.name 'nimi'
 -git push remotennimi haarannimi = commitin julkaiseminen eli puskeminen (-u vivulla tallentuu valinta ja sen jälkeen riittää pelkkä git push)
 -git pull = hakee muutokset paikalliseen versioon githubista
 -git fetch = hakee projektin uusimman tilan githubista
-
+-git stash -u = (u=untracked, muuten ilman vipua) pistää tehdyt paikalliset muutokset sivuun
+-git stash pop = tuo takaisin sivuun laitetut muutokset
 
