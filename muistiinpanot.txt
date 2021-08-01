@@ -66,4 +66,7 @@ git config --global user.name 'nimi'
 
 -git remote add origin git@github.com:kayttaja/projekti.git = etärepositorion liittäminen ssh yhteydellä
 -git push remotennimi haarannimi = commitin julkaiseminen eli puskeminen (-u vivulla tallentuu valinta ja sen jälkeen riittää pelkkä git push)
+-git pull = hakee muutokset paikalliseen versioon githubista
+-git fetch = hakee projektin uusimman tilan githubista
+
 
