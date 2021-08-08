@@ -70,4 +70,7 @@ git config --global user.name 'nimi'
 -git fetch = hakee projektin uusimman tilan githubista
 -git stash -u = (u=untracked, muuten ilman vipua) pistää tehdyt paikalliset muutokset sivuun
 -git stash pop = tuo takaisin sivuun laitetut muutokset
+-git checkout commitin_id = tiettyyn committiin siirtyminen
+-git show commit_id = tietyn commitin tarkastelu
+
 
