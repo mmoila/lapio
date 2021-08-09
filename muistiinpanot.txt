@@ -72,5 +72,7 @@ git config --global user.name 'nimi'
 -git stash pop = tuo takaisin sivuun laitetut muutokset
 -git checkout commitin_id = tiettyyn committiin siirtyminen
 -git show commit_id = tietyn commitin tarkastelu
+-git clone repo_osoite = projektin kopiointi omalle koneelle
+-git remote -v = remote repojen osoitteet
 
 
